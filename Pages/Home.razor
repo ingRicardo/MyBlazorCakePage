@@ -73,25 +73,25 @@
         <p>Cream : @SelectedCream</p>
         <button class="btn btn-primary" @onclick="OpenDataCaptureModal" >Comment</button>
         <DataCaptureModal @ref="dataCaptureModal" Title="Enter New Comment" OnSubmit="HandleDataSubmission" OnClose="HandleModalClose">
-            <EditForm Model="newItem" OnValidSubmit="HandleDataSubmission">
+            <EditForm Model="newComment" OnValidSubmit="HandleDataSubmission">
                 <DataAnnotationsValidator />
                 <ValidationSummary />
 
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <InputText id="name" class="form-control" @bind-Value="newItem.Name" />
+                    <InputText id="name" class="form-control" @bind-Value="newComment.Name" />
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <InputTextArea id="description" class="form-control" @bind-Value="newItem.Description" />
+                    <InputTextArea id="description" class="form-control" @bind-Value="newComment.Description" />
                 </div>
             </EditForm>
         </DataCaptureModal>
         <br />
-        @if (!string.IsNullOrEmpty(newItem.Name) && !string.IsNullOrEmpty(newItem.Description))
+        @if (!string.IsNullOrEmpty(newComment.Name) && !string.IsNullOrEmpty(newComment.Description))
         {
         
-        <p>You are @newItem.Name - @newItem.Description</p>
+        <p>You are @newComment.Name - @newComment.Description</p>
         }
         <p>@showComment.ToString()</p>
 
@@ -135,11 +135,11 @@
 
     // Example: Instantiating in OnInitializedAsync
     private DataCaptureModal dataCaptureModal;
-    private Item newItem = new Item();
+    private Item newComment = new Item();
 
     private void OpenDataCaptureModal()
     {
-        newItem = new Item(); // Reset the item for new data entry
+        newComment = new Item(); // Reset the item for new data entry
         dataCaptureModal.Show();
     }
 
@@ -147,8 +147,8 @@
     {
         showComment = true;
 
-        // Process the newItem data (e.g., save to a list, database)
-        Console.WriteLine($"New Item: Name = {newItem.Name}, Description = {newItem.Description}");
+        // Process the newComment data (e.g., save to a list, database)
+        Console.WriteLine($"New Item: Name = {newComment.Name}, Description = {newComment.Description}");
         // Optionally, add the item to a list or service
         Console.WriteLine($"FLAG = {showComment}");
     }
