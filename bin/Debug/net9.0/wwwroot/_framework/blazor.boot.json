@@ -1,8 +1,13 @@
 {
   "mainAssemblyName": "MyCakeApp",
   "resources": {
-    "hash": "sha256-fo0dWu9duj9ed7geDHxtU5jQuoV1hThmk1hJr6gAk+E=",
+    "hash": "sha256-K4EfdZGvipRL2cyZCQDP/3wrd6OAqVYFbFgDc10R/QQ=",
     "fingerprinting": {
+      "BlazorBootstrap.ym6tnrklwx.wasm": "BlazorBootstrap.wasm",
+      "Blazorise.iqz1b3rmjf.wasm": "Blazorise.wasm",
+      "Blazorise.Bootstrap5.75yijpsi90.wasm": "Blazorise.Bootstrap5.wasm",
+      "Blazorise.Icons.FontAwesome.x036b7i392.wasm": "Blazorise.Icons.FontAwesome.wasm",
+      "Blazorise.Licensing.5q2r77toij.wasm": "Blazorise.Licensing.wasm",
       "Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.65wbz7t8mt.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.ysqd97eroy.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -201,8 +206,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "MyCakeApp.ye2mf43xmn.wasm": "MyCakeApp.wasm",
-      "MyCakeApp.ru63z5p5lk.pdb": "MyCakeApp.pdb"
+      "MyCakeApp.vk5891u0x3.wasm": "MyCakeApp.wasm",
+      "MyCakeApp.kzpott26nh.pdb": "MyCakeApp.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -223,6 +228,11 @@
       "System.Private.CoreLib.uqnhzdwypx.wasm": "sha256-dmlLyil2xqdBc+0yMfmACcDeIGVefS4QHjRT/9mLdNs="
     },
     "assembly": {
+      "BlazorBootstrap.ym6tnrklwx.wasm": "sha256-JvZh7RjGQpT7CC6gfoLZbKPPkhcor/rhKKpkCt/2lfU=",
+      "Blazorise.iqz1b3rmjf.wasm": "sha256-1o2VGV/DHimk4IeYpajHQYo6uohGK+DRxgTfn1Acjs8=",
+      "Blazorise.Bootstrap5.75yijpsi90.wasm": "sha256-pUsCW9WmO2G/QlZeoNCD5pI7uGGLULBVIGfZ5bgElng=",
+      "Blazorise.Icons.FontAwesome.x036b7i392.wasm": "sha256-L2QM/7YZRBr5LVFxh29rjDykFTjDBWXM3mFG3dxTy1g=",
+      "Blazorise.Licensing.5q2r77toij.wasm": "sha256-cwZ2JjZXwvbaPnMO5TRbPjB5RCR6BTjFabvKtE/wTnQ=",
       "Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm": "sha256-K3j153B4Qx57/sHT4gOICXyadidNa4qEUflLPz/OgCU=",
       "Microsoft.AspNetCore.Components.65wbz7t8mt.wasm": "sha256-esbkeXi/0iIJjs+MdmPU6nulNqIzqOw5a4hLgs2f6+U=",
       "Microsoft.AspNetCore.Components.Forms.ysqd97eroy.wasm": "sha256-8o1e7d2phwhchCrOcBV5r/UklI0sSixpCl8wQkEHNfE=",
@@ -412,10 +422,10 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "MyCakeApp.ye2mf43xmn.wasm": "sha256-uiTALuwE/OdjRO4QBpY/rhbtagoBGB8WKGsb76nMMCE="
+      "MyCakeApp.vk5891u0x3.wasm": "sha256-P/t3qJ69Wg50Y+3/Xbw/rL+fGauS5+ZAHwmKkzzfoLk="
     },
     "pdb": {
-      "MyCakeApp.ru63z5p5lk.pdb": "sha256-jbOCWk19LJ77vPhctxEL7/xsH3a7VwQXlmbI8PvokRU="
+      "MyCakeApp.kzpott26nh.pdb": "sha256-cPXDgE01+h3jtwf7Lcx6mTUep02QPRuw/uXUf8rFxpM="
     }
   },
   "cacheBootResources": true,

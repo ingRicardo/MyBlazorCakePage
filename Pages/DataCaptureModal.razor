@@ -1,0 +1,71 @@
+@if (IsVisible)
+{
+    <div class="modal fade show d-block" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@Title</h5>
+                    <button type="button" class="close-button" @onclick="CloseModal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @ChildContent
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CloseModal">Cancel</button>
+                    <button type="button" class="btn btn-primary" @onclick="SubmitData">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+  <style>
+  .close-button {
+  background: none;
+  border: none;
+  font-size: 1.5em; /* Adjust size as needed */
+  cursor: pointer;
+  color: #333; /* Adjust color as needed */
+  padding: 5px 10px;
+}
+
+.close-button:hover {
+  color: #f00707;
+}
+  </style>
+@code {
+    [Parameter]
+    public string Title { get; set; } = "Capture Data";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback OnSubmit { get; set; }
+
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+
+    public bool IsVisible { get; set; }
+
+    public void Show()
+    {
+        IsVisible = true;
+        StateHasChanged();
+    }
+
+    public void CloseModal()
+    {
+        IsVisible = false;
+        OnClose.InvokeAsync();
+        StateHasChanged();
+    }
+
+    private async Task SubmitData()
+    {
+        await OnSubmit.InvokeAsync();
+        CloseModal();
+    }
+}

@@ -1,0 +1,52 @@
+    @* ... HTML ... *@
+    @code {
+        [Parameter]
+        public RenderFragment? Header { get; set; }
+
+        [Parameter]
+        public RenderFragment? Body { get; set; }
+
+        [Parameter]
+        public RenderFragment? Footer { get; set; }
+    }
+    <!-- MyCard.razor -->
+    <div class="card">
+        @if (Header != null)
+        {
+            <div class="card-header">
+                @Header
+            </div>
+        }
+        <div class="card-body">
+            @Body
+        </div>
+        @if (Footer != null)
+        {
+            <div class="card-footer">
+                @Footer
+            </div>
+        }
+    </div>
+
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 10px;
+            width: 100% /* Example width */
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>

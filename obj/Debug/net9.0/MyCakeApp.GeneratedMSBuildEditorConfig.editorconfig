@@ -32,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/MyCakeApp/Pages/DataCaptureModal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YUNhcHR1cmVNb2RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/MyCakeApp/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/MyCakeApp/Pages/MyCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/MyCakeApp/Pages/Weather.razor]

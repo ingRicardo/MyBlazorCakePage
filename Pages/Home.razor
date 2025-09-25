@@ -1,8 +1,212 @@
 ﻿@page "/"
+@using System.Reflection
+ <PageTitle>Home</PageTitle>
 
-<PageTitle>Home</PageTitle>
+<h1>Hello! Make your Order</h1>
 
-<h1>Hello!</h1>
+<h3>Select ingredients:</h3>
 
 
-<p>This is my cake page</p>
+<label>Filling</label> : 
+<select class="form-select" aria-label="Default select example" @onchange="OnFillingSelect">
+  <option selected>Open this select menu</option>
+  <option value="Banana">Banana</option>
+  <option value="Strawberry">Strawberry</option>
+  <option value="Peach">Peach</option>
+</select>
+
+<label>Shape</label> : 
+<select class="form-select" aria-label="Default select example"  @onchange="OnShapeSelect">
+  <option selected>Open this select menu</option>
+  <option value="Round">Round</option>
+  <option value="Sheet cake">Sheet cake</option>
+ </select>
+
+<label class="label label-default" >Bread</label> : 
+<select class="form-select" aria-label="Default select example" @onchange="OnBreadSelect">
+  <option selected>Open this select menu</option>
+  <option value="Carrot">Carrot</option>
+  <option value="Vanilla">Vanilla</option>
+  <option value="Chocolate">Chocolate</option>
+ </select>
+
+<label>How many people</label> : 
+<select class="form-select" aria-label="Default select example" @onchange="OnPeopleSelect">
+  <option selected>Open this select menu</option>
+  <option value="10">10</option>
+  <option value="30">30</option>
+  <option value="40">40</option>
+</select>
+
+<label>Design Cover</label> : 
+<select class="form-select" aria-label="Default select example" @onchange="OnDesignSelect">
+  <option selected>Open this select menu</option>
+  <option value="Fondant">Fondant</option>
+  <option value="Regular">Regular</option>
+ </select>
+
+<label>Cream Color</label> : 
+<select class="form-select" aria-label="Default select example" @onchange="OnCreamSelect">
+  <option selected>Open this select menu</option>
+  <option value="white">white</option>
+  <option value="brown">brown</option>
+  <option value="pink">pink</option>
+</select>
+<br />
+
+@if (SelectedFilling != "Open this select menu" && SelectedShape != "Open this select menu" 
+    && SelectedBread != "Open this select menu" 
+    && SelectedPeople != "Open this select menu" 
+    && SelectedDesign != "Open this select menu" 
+    && SelectedCream != "Open this select menu")
+{
+    <MyCard>
+    <Header>
+        <h3>All ingredients selected!</h3>
+    </Header>
+    <Body>
+        <p>Filling : @SelectedFilling</p>
+        <p>Shape : @SelectedShape</p>
+        <p>Bread : @SelectedBread</p>
+        <p>People : @SelectedPeople</p>
+        <p>Design : @SelectedDesign</p>
+        <p>Cream : @SelectedCream</p>
+        <button class="btn btn-primary" @onclick="OpenDataCaptureModal" >Comment</button>
+        <DataCaptureModal @ref="dataCaptureModal" Title="Enter New Comment" OnSubmit="HandleDataSubmission" OnClose="HandleModalClose">
+            <EditForm Model="newItem" OnValidSubmit="HandleDataSubmission">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <InputText id="name" class="form-control" @bind-Value="newItem.Name" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <InputTextArea id="description" class="form-control" @bind-Value="newItem.Description" />
+                </div>
+            </EditForm>
+        </DataCaptureModal>
+        <br />
+        @if (!string.IsNullOrEmpty(newItem.Name) && !string.IsNullOrEmpty(newItem.Description))
+        {
+        
+        <p>You are @newItem.Name - @newItem.Description</p>
+        }
+        <p>@showComment.ToString()</p>
+
+    </Body>
+    <Footer>
+        <small>Cakes Company</small>
+    </Footer>
+    </MyCard>
+    <br />
+    <h3>Pick your Delivery Date</h3>
+
+    <EditForm Model="@Model">
+        <InputDate @bind-Value="Model.SelectedDate" class="my-custom-date-input"/>
+    </EditForm>
+    <p>Selected Date: @Model.SelectedDate </p>
+}
+
+
+
+
+@code {
+    private string SelectedFilling { get; set; } = "Open this select menu"; // Initialize with a default value
+    private string SelectedShape { get; set; } = "Open this select menu";
+    private string SelectedBread { get; set; } = "Open this select menu";
+    private string SelectedPeople { get; set; } = "Open this select menu";
+    private string SelectedDesign { get; set; } = "Open this select menu";
+    private string SelectedCream { get; set; } = "Open this select menu";
+    private bool showComment  { get; set; };
+
+    [Parameter]
+    public RenderFragment Header { get; set; }
+
+    [Parameter]
+    public RenderFragment Body { get; set; }
+
+    [Parameter]
+    public RenderFragment Footer { get; set; }
+
+        // Example: Instantiating the model
+    public MyModel Model { get; set; } = new MyModel(); 
+
+    // Example: Instantiating in OnInitializedAsync
+    private DataCaptureModal dataCaptureModal;
+    private Item newItem = new Item();
+
+    private void OpenDataCaptureModal()
+    {
+        newItem = new Item(); // Reset the item for new data entry
+        dataCaptureModal.Show();
+    }
+
+    private async Task HandleDataSubmission()
+    {
+        showComment = true;
+
+        // Process the newItem data (e.g., save to a list, database)
+        Console.WriteLine($"New Item: Name = {newItem.Name}, Description = {newItem.Description}");
+        // Optionally, add the item to a list or service
+        Console.WriteLine($"FLAG = {showComment}");
+    }
+
+    private void HandleModalClose()
+    {  
+        Console.WriteLine("Modal closed without submission.");
+        showComment = false;
+        Console.WriteLine($"FLAG = {showComment}");
+
+    }
+
+    public class Item
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+
+    private void OnShapeSelect(ChangeEventArgs e)
+    {
+        SelectedShape = e.Value?.ToString() ?? string.Empty;
+        // You can perform other actions here based on the selected value
+        
+    }
+    private void OnBreadSelect(ChangeEventArgs e)
+    {
+        SelectedBread = e.Value?.ToString() ?? string.Empty;
+        // You can perform other actions here based on the selected value
+        
+    }
+    private void OnPeopleSelect(ChangeEventArgs e)
+    {
+        SelectedPeople = e.Value?.ToString() ?? string.Empty;
+        // You can perform other actions here based on the selected value
+        
+    }
+    private void OnDesignSelect(ChangeEventArgs e)
+    {
+        SelectedDesign = e.Value?.ToString() ?? string.Empty;
+        // You can perform other actions here based on the selected value
+        
+    }   
+    private void OnCreamSelect(ChangeEventArgs e)
+    {
+        SelectedCream = e.Value?.ToString() ?? string.Empty;
+        // You can perform other actions here based on the selected value
+        
+    }
+    
+    private void OnFillingSelect(ChangeEventArgs e)
+    {
+        SelectedFilling = e.Value?.ToString() ?? string.Empty;
+        // You can perform other actions here based on the selected value
+        
+    }
+   // Define the MyModel class here or move it to a separate file if needed
+   public class MyModel
+    {
+        public DateTime SelectedDate { get; set; } = DateTime.Today;
+    }
+}
