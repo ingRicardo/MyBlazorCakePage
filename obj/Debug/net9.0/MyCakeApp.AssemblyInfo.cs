@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyCakeApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a491e61efb3f8ab6f394d48f5ebe19c70cc34730")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyCakeApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyCakeApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

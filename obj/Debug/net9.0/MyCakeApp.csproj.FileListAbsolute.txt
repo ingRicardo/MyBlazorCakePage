@@ -199,8 +199,6 @@ C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.xtdbvj1p2b.wasm
-C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.vmm7lbsvtm.pdb
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.z6jo10m0rd.wasm.gz
@@ -403,8 +401,6 @@ C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map.
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.xtdbvj1p2b.wasm.gz
-C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.vmm7lbsvtm.pdb.gz
 C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Projects\MyCakeApp\bin\Debug\net9.0\MyCakeApp.staticwebassets.runtime.json
 C:\Projects\MyCakeApp\bin\Debug\net9.0\MyCakeApp.staticwebassets.endpoints.json
@@ -1068,9 +1064,6 @@ C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\4tgn3s764h-zbl9qys38n.gz
 C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\tk99kekjcu-tjcz0u77k5.gz
 C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\pvxficu0qf-tptq2av103.gz
 C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\15ddcvni5k-lfu7j35m59.gz
-C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\ve4qzbauc5-xtdbvj1p2b.gz
-C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\fgq6pgg1sb-vmm7lbsvtm.gz
-C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\kjocwi25sc-96pc5n26of.gz
 C:\Projects\MyCakeApp\obj\Debug\net9.0\staticwebassets.build.json
 C:\Projects\MyCakeApp\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Projects\MyCakeApp\obj\Debug\net9.0\staticwebassets.development.json
@@ -1080,3 +1073,11 @@ C:\Projects\MyCakeApp\obj\Debug\net9.0\MyCakeApp.dll
 C:\Projects\MyCakeApp\obj\Debug\net9.0\refint\MyCakeApp.dll
 C:\Projects\MyCakeApp\obj\Debug\net9.0\MyCakeApp.pdb
 C:\Projects\MyCakeApp\obj\Debug\net9.0\ref\MyCakeApp.dll
+C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.ye2mf43xmn.wasm
+C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.ru63z5p5lk.pdb
+C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.ye2mf43xmn.wasm.gz
+C:\Projects\MyCakeApp\bin\Debug\net9.0\wwwroot\_framework\MyCakeApp.ru63z5p5lk.pdb.gz
+C:\Projects\MyCakeApp\obj\Debug\net9.0\MyCakeApp.sourcelink.json
+C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\ve4qzbauc5-ye2mf43xmn.gz
+C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\fgq6pgg1sb-ru63z5p5lk.gz
+C:\Projects\MyCakeApp\obj\Debug\net9.0\compressed\kjocwi25sc-v61oktcohv.gz
